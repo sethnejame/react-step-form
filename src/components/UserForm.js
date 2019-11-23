@@ -56,7 +56,7 @@ const UserForm = () => {
         <Confirm nextStep={nextStep} prevStep={prevStep} values={values} />
       );
     case 4:
-      return <Success values={values} />;
+      return <Success />;
     default:
       return;
   }
