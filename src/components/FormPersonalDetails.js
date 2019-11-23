@@ -18,12 +18,10 @@ const FormPersonalDetails = props => {
   const { occupation, bio, city } = props.values;
   const { handleChange, nextStep, prevStep } = props;
 
-  console.log(props.values);
-
   return (
     <MuiThemeProvider>
       <>
-        <AppBar title="Enter User Details" />
+        <AppBar title="Enter Personal Details" />
         <TextField
           hintText="Enter Your Occupation"
           floatingLabelText="Occupation"
