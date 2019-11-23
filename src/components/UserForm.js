@@ -35,11 +35,26 @@ const UserForm = () => {
 
   switch (step) {
     case 1:
-      return <FormPersonalDetails nextStep={nextStep} handleChange={handleChange} values={values} />;
+      return (
+        <FormUserDetails
+          nextStep={nextStep}
+          prevStep={prevStep}
+          handleChange={handleChange}
+          values={values}
+        />
+      );
     case 2:
-      return <FormUserDetails nextStep={nextStep} prevStep={prevStep} handleChange={handleChange} values={values} />;
+      return (
+        <FormPersonalDetails
+          nextStep={nextStep}
+          handleChange={handleChange}
+          values={values}
+        />
+      );
     case 3:
-      return <Confirm nextStep={nextStep} prevStep={prevStep} values={values} />;
+      return (
+        <Confirm nextStep={nextStep} prevStep={prevStep} values={values} />
+      );
     case 4:
       return <Success values={values} />;
     default:
