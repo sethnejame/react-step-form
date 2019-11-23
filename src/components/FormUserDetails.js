@@ -51,7 +51,12 @@ const FormUserDetails = props => {
           defaultValue={email}
         />
         <br />
-        <RaisedButton label="Continue" primary={true} style={styles.button} />
+        <RaisedButton
+          label="Continue"
+          primary={true}
+          style={styles.button}
+          onClick={moveForward}
+        />
       </>
     </MuiThemeProvider>
   );
@@ -61,6 +66,6 @@ const styles = {
   button: {
     margin: 15
   }
-}
+};
 
 export default FormUserDetails;
