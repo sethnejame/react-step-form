@@ -56,7 +56,7 @@ const FormPersonalDetails = props => {
         />
         <RaisedButton
           label="Go Back"
-          primary={true}
+          primary={false}
           style={styles.button}
           onClick={moveBackward}
         />
