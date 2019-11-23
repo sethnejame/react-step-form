@@ -10,15 +10,7 @@ const FormUserDetails = props => {
     nextStep();
   };
 
-  const {
-    step,
-    firstName,
-    lastName,
-    email,
-    occupation,
-    city,
-    bio
-  } = props.values;
+  const { firstName, lastName, email } = props.values;
   const { handleChange, nextStep } = props;
 
   console.log(props.values);
