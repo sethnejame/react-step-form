@@ -1,8 +1,9 @@
 import React from "react";
+import UserForm from "./components/UserForm";
 
 const App = () => (
-  <div className="container-fluid">
-    <h1>Hello World!</h1>
+  <div>
+    <UserForm />
   </div>
 );
 
