@@ -9,11 +9,11 @@ const FormUserDetails = props => {
     e.preventDefault();
     props.nextStep();
   };
-  const { step, firstName, lastName, email, occupation, city, bio } = props;
+  const { step, firstName, lastName, email, occupation, city, bio } = props.values;
   return (
-    <div>
+    <MuiThemeProvider>
       <h1>Form User Details</h1>
-    </div>
+    </MuiThemeProvider>
   );
 };
 
