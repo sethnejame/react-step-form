@@ -17,10 +17,11 @@ const FormUserDetails = props => {
     email,
     occupation,
     city,
-    bio,
-    handleChange,
-    nextStep
+    bio
   } = props.values;
+  const { handleChange, nextStep } = props;
+
+  console.log(props.values);
 
   return (
     <MuiThemeProvider>
@@ -33,9 +34,33 @@ const FormUserDetails = props => {
           name="firstName"
           defaultValue={firstName}
         />
+        <br />
+        <TextField
+          hintText="Enter Your Last Name"
+          floatingLabelText="Last Name"
+          onChange={handleChange}
+          name="lastName"
+          defaultValue={lastName}
+        />
+        <br />
+        <TextField
+          hintText="Enter Your Email"
+          floatingLabelText="Email"
+          onChange={handleChange}
+          name="email"
+          defaultValue={email}
+        />
+        <br />
+        <RaisedButton label="Continue" primary={true} style={styles.button} />
       </>
     </MuiThemeProvider>
   );
 };
+
+const styles = {
+  button: {
+    margin: 15
+  }
+}
 
 export default FormUserDetails;
