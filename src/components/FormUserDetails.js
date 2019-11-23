@@ -7,12 +7,33 @@ import RaisedButton from "material-ui/RaisedButton";
 const FormUserDetails = props => {
   const moveForward = e => {
     e.preventDefault();
-    props.nextStep();
+    nextStep();
   };
-  const { step, firstName, lastName, email, occupation, city, bio } = props.values;
+
+  const {
+    step,
+    firstName,
+    lastName,
+    email,
+    occupation,
+    city,
+    bio,
+    handleChange,
+    nextStep
+  } = props.values;
+
   return (
     <MuiThemeProvider>
-      <h1>Form User Details</h1>
+      <>
+        <AppBar title="Enter User Details" />
+        <TextField
+          hintText="Enter Your First Name"
+          floatingLabelText="First Name"
+          onChange={handleChange}
+          name="firstName"
+          defaultValue={firstName}
+        />
+      </>
     </MuiThemeProvider>
   );
 };

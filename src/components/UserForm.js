@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import FormPersonalDetails from "./FormPersonalDetails";
 import FormUserDetails from "./FormUserDetails";
 import Confirm from "./Confirm";
@@ -28,6 +28,7 @@ const UserForm = () => {
   const handleChange = e => {
     e.preventDefault();
     setUser({ ...user, [e.target.name]: e.target.value });
+    console.log(user)
   };
 
   const { step, firstName, lastName, email, occupation, city, bio } = user;
